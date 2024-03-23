@@ -1,4 +1,9 @@
-Para vizualizar o projeto, siga os passos abaixo:
+Para visualização web do projeto, acesse o link abaixo:
+
+https://lucas-satoshi.github.io/WEBAPPPYTHON
+
+
+Para visualizar o projeto no repositório local de seu computador, siga os passos abaixo:
 
 
 1. Clone este repositório com o comando abaixo:
