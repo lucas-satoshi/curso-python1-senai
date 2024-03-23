@@ -1,9 +1,14 @@
-Para vizualizar o projeto, siga os passos abaixo:
+Para visualização web do projeto, acesse o link abaixo:
+
+https://lucas-satoshi.github.io/WEBAPPPYTHON
+
+
+Para visualizar o projeto no repositório local de seu computador, siga os passos abaixo:
 
 
 1. Clone este repositório com o comando abaixo:
 
-git clone https://github.com/lucas-satoshi/curso-python1-senai
+git clone https://github.com/lucas-satoshi/WEBAPPPYTHON
 
 
 2. Siga os passos do link abaixo para criar o ambiente virtual para executar o código:
