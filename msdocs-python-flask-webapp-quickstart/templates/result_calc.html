@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+    <title>Calculadora - Fundamentos de Python 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/senai-logo.png') }}">
+</head>
+<html>
+   <body>
+     <main>
+        <div class="px-4 py-3 my-2 text-center">
+            <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/senai-logo.png') }}" alt="Senai Logo" width="192" height="192" style="user-select: none; pointer-events: none;"/>
+            <!-- <img  src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+            <h1 class="display-6 fw-bold">E o resultado esperado é {{result}}!</h1>
+            <p class="fs-5">
+                É simples e muito legal!</br>
+                Retorne a tela inicial para explorar outras atividades.
+            </p>
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg px-4 gap-3" style="background-color: #ff0000; border-color: #ff0000; margin: 1rem;">Retornar a tela inicial</a>
+          </div>
+     </main>      
+   </body>
+</html>
