@@ -8,25 +8,62 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-   print('Request for index page received')
    return render_template('index.html')
-
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/hello', methods=['POST'])
 def hello():
-   name = request.form.get('name')
+   getname = request.form.get('name')
 
-   if name:
-       print('Request for hello page received with name=%s' % name)
-       return render_template('hello.html', name = name)
+   if getname:
+       return render_template('hello.html', name = getname)
    else:
-       print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
 
+@app.route('/indexcalculate')
+def indexcalculate():
+    return render_template('calculadora.html')
+
+@app.route('/calculate', methods=['POST'])
+def calculate():
+    valor_a = request.form.get('valor-a')
+    valor_b = request.form.get('valor-b')
+    operador = request.form.get('operador')
+
+    if operador == "+":         
+        result = int(valor_a) + int(valor_b)
+    if operador == "-":         
+        result = int(valor_a) - int(valor_b)
+    if operador == "*":         
+        result = int(valor_a) * int(valor_b)
+    if operador == "**":         
+        result = int(valor_a) ** int(valor_b)
+    if operador == "/": 
+        if valor_b != "0":        
+            result = int(valor_a) / int(valor_b)
+        else:
+            result = "Não divisível por Zero"
+    if operador == "//":         
+        result = int(valor_a) // int(valor_b)
+    if operador == "%":         
+        result = int(valor_a) % int(valor_b)
+    if operador == "raiz":         
+        raiz = int(valor_a) ** (1/int(valor_b))
+        result = round(raiz, 2)
+
+
+    return render_template('result_calc.html', result = result)
+
+@app.route('/tarefa1')
+def tarefa1():
+    return render_template('tarefa1.html')
+
+@app.route('/mediaAparada')
+def mediaAparada():
+    return render_template('tarefa-media-aparada.html')
+
+@app.route('/tarefa2')
+def tarefa2():
+    return render_template('tarefa2.html')
 
 if __name__ == '__main__':
    app.run()
