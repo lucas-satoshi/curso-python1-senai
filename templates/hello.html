@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+    <title>Projeto App - by Lucas Satoshi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/senai-logo.png') }}">
+</head>
+<html>
+   <body>
+     <main>
+        <div class="px-4 py-3 my-2 text-center">
+            <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/senai-logo.png') }}" alt="Senai Logo" width="192" height="192" style="user-select: none; pointer-events: none;"/>
+            <!-- <img  src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+            <h1 class="display-6 fw-bold">Olá {{name}}</h1>
+            <p class="fs-5">
+                Tenho o prazer em te conhecer!</br>
+                Selecione o menu abaixo conforme as funções desenvolvidas nesta atividade.</br>
+                Aqui você encontra também o repositório com a resolução de todas as atividades desenvolvidas ao longo do curso.
+            </p>
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg px-4 gap-3" style="background-color: #ff0000; border-color: #ff0000; margin: 1rem;">Retornar a tela inicial</a>
+            <a href="{{ url_for('indexcalculate') }}" class="btn btn-primary btn-lg px-4 gap-3" style="background-color: #ff0000; border-color: #ff0000; margin: 1rem;">Calculadora</a>
+            <a href="{{ url_for('tarefa1') }}" class="btn btn-primary btn-lg px-4 gap-3" style="background-color: #ff0000; border-color: #ff0000; margin: 1rem;">Repositório da Tarefa 1</a>
+            <a href="{{ url_for('mediaAparada') }}" class="btn btn-primary btn-lg px-4 gap-3" style="background-color: #ff0000; border-color: #ff0000; margin: 1rem;">Repositório da Tarefa Média Aparada</a>
+            <a href="{{ url_for('tarefa2') }}" class="btn btn-primary btn-lg px-4 gap-3" style="background-color: #ff0000; border-color: #ff0000; margin: 1rem;">Repositório da Tarefa 2</a>
+          </div>
+     </main>      
+   </body>
+</html>

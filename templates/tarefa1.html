@@ -1,0 +1,48 @@
+<!doctype html>
+<head>
+    <title>Tarefa 1 - Fundamentos de Python 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/senai-logo.png') }}">
+</head>
+<html>
+   <body>
+     <main>
+        <div class="px-4 py-3 my-2 text-center">
+            <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/senai-logo.png') }}" alt="Senai Logo" width="192" height="192"/>
+            <!-- <img  src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+            <h1 class="display-6 fw-bold text-primary" style="color: #ff0000 !important;"> Aqui está o projeto da calculadora simplificada</h1>            
+          </div>
+        <form method="post" action="{{url_for('calculate')}}">
+            <div class="col-md-6 mx-auto text-center">
+                <label for="name" class="form-label fw-bold fs-5">Por gentileza, digite abaixo os comandos desejados:</label>
+
+                <!-- <p class="lead mb-2">Could you please tell me your name?</p> -->
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
+                  <input type="text" class="form-control" id="valor-a" name="valor-a" style="max-width: 256px;" placeholder="Digite o primeiro número">
+                </div>
+
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
+                  <input type="text" class="form-control" id="valor-b" name="valor-b" style="max-width: 256px;" placeholder="Digite o segundo número">
+                </div>
+
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
+                  <select name="operador" id="operador" class="form-control" aria-label=".form-select-lg example" style="max-width: 256px;">
+                    <option value="+">Adição</option>
+                    <option value="-">Subtração</option>
+                    <option value="/">Divisão</option>
+                    <option value="*">Multiplicação</option>
+                    <option value="**">Exponenciação</option>
+                    <option value="//">Divisão Inteira</option>
+                    <option value="%">Resto da Divisão</option>
+                    <option value="raiz">Raiz</option>
+                  </select>
+                </div>
+
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
+                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3" style="background-color: #ff0000; border-color: #ff0000;">Calcular</button>
+                </div>            
+            </div>
+        </form>
+     </main>      
+   </body>
+</html>
