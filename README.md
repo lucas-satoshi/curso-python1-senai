@@ -1,8 +1,3 @@
-Para visualização web do projeto, acesse o link abaixo:
-
-https://lucas-satoshi.github.io/curso-python1-senai
-
-
 Para visualizar o projeto no repositório local de seu computador, siga os passos abaixo:
 
 
@@ -29,11 +24,3 @@ python -m pip install -r .\requirements.txt
 5. Execute o comando abaixo no terminal para rodar local o App WebAPI
 
 flask run
-
-
-Para atualizar o site no repositório do GitHub Pages, é necessário instalar o Frozen-Flask pelo seguinte comando:
-
-pip install Frozen-Flask
-
-
-Após isso, é só executar o build toda vez que atualizar.
